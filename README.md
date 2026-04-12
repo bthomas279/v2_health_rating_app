@@ -1,12 +1,13 @@
-# Machine Learning Model of the Student Health Rating App Project
+# V2 of the Student Health Rating App Project
 **IMPORTANT NOTICE: This project is still under development.**
 
 Planned Development
-1. FAST API integration
+1. Codebase conversion to Python
 2. Model optimizations
 
 ## About 
-This repository houses the machine learning model for my student mental health rating system.
+This repository houses both the server code, and the machine learning model for my student mental health rating system. I found many flaws with my current system, so I decided to change the codebase of the main server from JavaScript to Python. With this change, I shall naturally switch the server environment from Node.js to FastAPI
+The old mental_health_app is too
 
 ## Features
 
