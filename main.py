@@ -25,7 +25,7 @@ class MentalData(BaseModel):
 
 
 #Runs the model (starts on button submission)
-#Important note: User Warning will appear 
+#Important note: User Warning will appear
 
 @app.post("/grab/")
 async def data_grab(user: MentalData):
