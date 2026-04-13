@@ -3,8 +3,11 @@
 from fastapi import APIRouter
 
 #Define Route
-router = APIRouter()
+#This is our "router"
+login = APIRouter(prefix="/login")
 
-@router.get("/login")
-def get_login():
+
+@login.get("/")
+def login_render():
     return {"placeholder"}
+

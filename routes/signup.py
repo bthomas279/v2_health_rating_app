@@ -3,8 +3,9 @@
 from fastapi import APIRouter
 
 #Define Route
-router = APIRouter()
+#This is our "router"
+signup = APIRouter(prefix="/signup")
 
-@router.get("/signup")
-def get_signup():
+@signup.get("/")
+def signup_render():
     return {"placeholder"}

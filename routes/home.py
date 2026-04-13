@@ -3,8 +3,9 @@
 from fastapi import APIRouter
 
 #Define Route
-router = APIRouter()
+#This is our "router"
+home = APIRouter(prefix="/home")
 
-@router.get("/home")
-def get_home():
+@home.get("/")
+def home_render():
     return {"placeholder"}

@@ -1,20 +1,22 @@
 #Code to create API
 #Imports
 from fastapi import FastAPI
+import uvicorn
 
+#Grab routes
 #Structure: folder.file
-from routes.signup import signup 
+from routes.signup import signup
 from routes.login import login
 from routes.home import home
 
-import uvicorn
 
 #Define App
 app = FastAPI()
 
-app.include_router(signup.router)
-app.include_router(login.router)
-app.include_router(home.router)
+#Define routes in main
+app.include_router(signup)
+app.include_router(login)
+app.include_router(home)
 
 
 #Runs the model (starts on button submission)
