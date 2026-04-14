@@ -4,19 +4,22 @@ from fastapi import FastAPI
 import uvicorn
 
 #Grab routes
-#Structure: folder.file
-from routes.signup import signup
-from routes.login import login
-from routes.home import home
+
+from routes import login, home, signup
 
 
 #Define App
-app = FastAPI()
+app = FastAPI(title="Mental Health Web-App")
+
 
 #Define routes in main
-app.include_router(signup)
-app.include_router(login)
-app.include_router(home)
+app.include_router(signup.router, prefix="/users", tags=["Users"])
+#app.include_router(login)
+#app.include_router(home)
+
+@app.get("/")
+def root():
+    return {"message": "Welcome to the API"}
 
 
 #Runs the model (starts on button submission)
