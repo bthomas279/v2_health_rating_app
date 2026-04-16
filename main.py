@@ -5,7 +5,7 @@ import uvicorn
 
 #Grab routes
 
-from routes import login, home, signup
+from routes import signup
 
 
 #Define App
